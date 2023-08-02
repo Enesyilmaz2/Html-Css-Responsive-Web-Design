@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* Projede Kuullanılacak Değişkenleri Burada Belirttik */
+/* İleri Aşamada olacak örneğin renk değişkenliğinde tek bir yerden yönetmek için */
+
+:root{
+    --maincolor:#fafafa;
+    --white:#fff;
+    --circle-2:#887a9c;
+    --circle-1:#4f93a6;
+    --text:black;
+    --text2:#a0d1df;
+}
+
+/* Projedeki tüm etiketkleri etki etmek için '*' seçicisi kullanılır. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Paddigleri Width değerine dahil etmek için bu özellik kullanılır  */
+    font-family: "poppins", 'Indie Flower', sans-serif ;
+}
+
+/* Header Alanı Start  */
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 5px;
+}
+ 
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Logodaki yuvarlak */
+
+/* Boyutlandırma için */
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Ayrı Ayrı renkleri değiştirmek için kullandık */
+.circle-1{
+    background-color: var(--circle-1);
+    position: absolute;
+    right: 0;
+}
+
+.circle-2{
+    background-color: var(--circle-2);
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Header Alanı -End  */
+
+
+/* Hakkında Alanı -Start  */
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin: 60px 0;
+
+
+}
+
+.about-picture{
+    display: flex;
+    align-items: center;
+}
+
+.about-picture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .3s;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.about-picture img:hover{
+    transform: translateY(-5px);
+}
+
+.col-1{
+    margin-left: -15px;
+}
+
+.col-2, .col-5{
+    margin-bottom: 90px;
+}
+
+.about .about-info{
+    margin: 0 50px;
+}
+
+.about .about-info h1, p{
+    text-align: center;
+}
+
+.about .about-info h1{
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 0.8px;
+}
+
+.about .about-info p{
+    font-size: 20pxx;
+    color: var(--text2);
+}
+
+.about .about-info a{
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    color: var(--white);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.btn-1{
+    background-color: var(--text2);
+
+}
+
+.btn-1 span{
+    background-color: transparent;
+}
+
+.btn-2{
+   background-color: var(--circle-1); 
+}
+
+/* Hakkında Alanı -eND  */
+
+
+/* Geçiş */
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.way{
+    height: 40px;
+    border: 1px solid black;
+}
+
+.line-circle{
+    width: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+/* İçerik Alanı Start  */
+
+.container{
+    max-width: 1200px;
+    margin: 0 50px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px 5px;
+    border-radius: 5px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info h3{
+    font-size: 12px;
+    color: var(--circle-2);
+}
+
+
+
+
+/* İçerik Alanı End  */
+
+
+
+/* Footer Start  */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image:  linear-gradient(to bottom, #599aacb2, #599aacb2),
+    url('pic/df.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    height: 400px;
+}
+
+footer h4, p{
+    color: white;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+footer h4{
+    opacity: 0.8;
+    margin: 10px 20px;
+    letter-spacing: 1px;
+}
+
+footer p{
+    font-size: 15px;
+    
+}
+
+
+.btn-3{
+    background-color: var(--circle-1);
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.btn-3 span {
+    background-color: transparent;
+    color: var(--paragraph-2);
+  }
+
+/* Footer End  */
+
